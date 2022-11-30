@@ -7,7 +7,7 @@ class CreateNews < ActiveRecord::Migration[7.0]
       t.string :news_status
       t.string :comment_status
       t.references :author, null: false, foreign_key: { to_table: :users }
-      t.references :categories, null: false, foreign_key: true
+      t.references :category, null: false, foreign_key: true
 
       t.timestamps
     end

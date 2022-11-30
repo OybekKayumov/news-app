@@ -12,6 +12,22 @@
   <% end %>
 
   <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div>
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.all.map { |c| [c.title, c.id] } %>
+  </div>
+
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

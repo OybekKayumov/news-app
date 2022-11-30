@@ -13,6 +13,7 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
+    @categories = Category.all
   end
 
   # GET /news/1/edit
