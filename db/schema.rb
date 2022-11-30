@@ -10,14 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_080012) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_30_083359) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pages", force: :cascade do |t|
-    t.string "home"
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "posted_date"
+    t.string "news_status"
+    t.string "comment_status"
+    t.bigint "author_id", null: false
+    t.bigint "categories_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_news_on_author_id"
+    t.index ["categories_id"], name: "index_news_on_categories_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -28,8 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_080012) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role", default: "subscriber"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "news", "categories", column: "categories_id"
+  add_foreign_key "news", "users", column: "author_id"
 end
