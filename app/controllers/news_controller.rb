@@ -23,6 +23,11 @@ class NewsController < ApplicationController
   # POST /news or /news.json
   def create
     @news = News.new(news_params)
+    @news.author_id = current_user.id
+    @news.posted_date = Time.now
+    @news.news_status = "published"
+    @news.comment_status = "open"
+    # @news.category_id = params[:category_id]
 
     respond_to do |format|
       if @news.save
@@ -66,6 +71,7 @@ class NewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def news_params
-      params.fetch(:news, {})
+      # params.fetch(:news, {})
+      params.require(:news).permit(:title, :content, :posted_date, :news_status, :comment_status, :author_id, :category_id)
     end
 end
