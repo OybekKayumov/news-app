@@ -13,13 +13,16 @@
 
   <div>
     <%= form.label :title %>
-    <%= form.text_field :title %>  
-    <%= form.rich_text_area :content %>
+    <%= form.text_field :title %>     
   </div>
 
   <div>
     <%= form.label :category_id %>
     <%= form.select :category_id, Category.all.map { |c| [c.title, c.id] } %>
+  </div>
+  <div>
+    <%= form.label :content %>
+     <%= form.rich_text_area :content %>
   </div>
 
 

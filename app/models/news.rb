@@ -1,6 +1,6 @@
 class News < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  belongs_to :category, class_name: 'Category', foreign_key: 'categories_id'
+  belongs_to :category, class_name: 'Category', foreign_key: 'category_id'
 
   has_rich_text :content
   # has_many :comments, dependent: :destroy
