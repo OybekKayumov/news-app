@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   get 'pages/home'
   root "pages#home"
   devise_for :users
