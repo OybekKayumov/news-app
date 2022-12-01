@@ -1,6 +1,6 @@
-<header class=" bg-white dark:bg-gray-800 border shadow-lg flex md:flex-col py-4 md:py-0">
-    <div class="py-0 row md:container mx-auto  sm:px-7 flex align-center justify-between">
-        <div class="flex col-3 ">
+<header class=" bg-white dark:bg-gray-800 flex lg:flex-col py-4 md:py-0">
+    <div class="py-0 lg:container mx-auto  sm:px-7 flex align-center justify-between">
+        <div class="flex">
             <!-- Burger Icon -->                    
             <div id="bgIcon" onclick="toggleMenu()"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 flex justify-center items-center cursor-pointer hamburger-fixed">
@@ -13,36 +13,35 @@
                 </svg>
             </button>
         </div>
-        <div class="mobile-hide col-6 flex items-center justify-around">
-            <%= link_to "Uzbekistan", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+        <div class="mobile-hide flex items-center justify-around">
+            <%= link_to "UZBEKISTAN", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
 
-            <%= link_to "International", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "INTERNATIONAL", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
 
-            <%= link_to "China", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "CHINA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
 
-            <%= link_to "India", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "INDIA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
 
-                <%= link_to "Russia", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>    
+                <%= link_to "RUSSIA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>    
         </div>
-        <div class="mobile-hide col-3 flex align-center justify-around">
-            <%= link_to "Subscribe For $0.2/week", '#', class: "text-sm font-normal text-gray-800 bg-cyan-500 dark:text-white  hover:bg-cyan-700 hover:text-white dark:hover:text-gray-300 p-1 my-2" %>
+        <div class="mobile-hide flex align-center justify-around">
+            <%= link_to "Subscribe For $0.2/week", '#', class: "text-sm font-bold rounded-md text-white  bg-cyan-700 dark:text-white  hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1" %>
             
-            <%= link_to "Login", '#', class: "ml-2 text-sm font-normal text-gray-800 dark:text-white bg-cyan-500 hover:bg-cyan-700 hover:text-white dark:hover:text-gray-300 p-1 my-2" %>
+            <%= link_to "Login", '#', class: "ml-2 text-sm font-normal rounded-md text-white dark:text-white bg-cyan-700 hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1" %>
         </div>
     </div>
 
-    <%# <nav class="border container row mx-auto py-0 sm:px-7 py-5 px-4 flex items-center justify-between "> %>
-    <nav class="container mx-auto py-0 sm:px-7 py-5 px-4 md:grid-container md:grid md:grid-cols-12 flex items-center justify-between ">
+    <nav class="container mx-auto md:mb-2 py-0 sm:px-7 py-5 px-4 lg:grid-container lg:grid lg:grid-cols-12 flex items-center justify-between ">
         <!-- For large and Medium-sized Screen -->                
-            <div class="dark:text-white col-span-3 hidden sm:flex flex-col items-start space-x-6">
+            <div class="mobile-hide dark:text-white col-span-3 flex flex-col items-start space-x-6">
                 <%= Date.today.to_fs(:long) %> 
                 <p><%= link_to "Today's Paper" %></p>
             </div>
-            <div class="md:col-span-6 flex space-x-3 items-center">
+            <div class="lg:col-span-6 flex space-x-3 items-center">
                 <h1 class=" font-normal text-2xl leading-6 text-gray-800 dark:text-white text-4xl lg:text-6xl" >The News Time</h1>
             </div>
 
-            <div class="md:col-span-3 flex items-center justify-end">                    
+            <div class="lg:col-span-3 flex items-center justify-end">                    
                 <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
             </div>
         
@@ -56,6 +55,29 @@
                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg4.svg" alt="instagram" />                                                             
             </div>                    
         </div>
-    </nav>    
+    </nav>
+
+    <div class="mobile-hide justify-center py-0 lg:container mx-auto  sm:px-7">
+        <div class="flex item-center justify-center border-t-2  lg:container lg:flex md:flex-wrap">
+            <%= link_to "World", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Uzbekistan", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Politics", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Tashkent", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Business", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Opinion", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Science", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Health", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Sports", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Arts", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Books", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Style", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Food", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Travel", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Magazine", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            <%= link_to "Real Estate", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+        </div>
+    </div>
+
 </header>
+    <div class="border-t-2 border-b-2 height"></div>
 

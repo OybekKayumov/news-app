@@ -12,7 +12,11 @@ body {
   z-index: 100;
 }
 
-@media screen and (min-width: 767px) {
+.height {
+  height: 6px;
+}
+
+@media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
   }
