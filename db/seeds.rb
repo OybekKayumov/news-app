@@ -11,6 +11,10 @@ User.create!(email: 'oybek@newsappp.com', password: 'password', password_confirm
 User.create!(email: 'john@doe.com', password: 'password', password_confirmation: 'password', role: "author")
 User.create!(email: 'jane@doe.com', password: 'password', password_confirmation: 'password', role: "author")
 
+# Editor
+User.create!(email: 'editor1@newsapp.com', password: 'password', password_confirmation: 'password', role: "editor")
+User.create!(email: 'editor2@newsapp.com', password: 'password', password_confirmation: 'password', role: "editor")
+
 # World news journalists
 User.create!(email: 'world_news1@newsapp.com', password: 'password', password_confirmation: 'password', role: "author")
 User.create!(email: 'world_news2@newsapp.com', password: 'password', password_confirmation: 'password', role: "author")

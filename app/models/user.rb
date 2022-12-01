@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :news, dependent: :destroy
   
-  roles = %w[admin subscriber author]
+  roles = %w[admin editor author subscriber]
   roles.each do |role_name|
     define_method "#{role_name}?" do
       role == role_name
