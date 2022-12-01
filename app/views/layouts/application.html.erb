@@ -7,7 +7,9 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", 
+      'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap',
+      "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
