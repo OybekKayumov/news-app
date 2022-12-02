@@ -64,6 +64,14 @@ body {
   padding: 0 6px;
 }
 
+#dropdown {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
@@ -78,5 +86,13 @@ body {
 
   #menuList {
     width: 300px;
+  }
+
+  #dropdown {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 30%;
+    height: calc(100% - 100px);
   }
 }  

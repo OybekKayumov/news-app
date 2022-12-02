@@ -43,12 +43,9 @@
                 </h1>
             </div>
             
-            <div class="lg:col-span-3 flex items-center justify-end">
-                    <%= image_tag "https://avatars.githubusercontent.com/u/49184579?v=4", class: "w-10 h-10 rounded-full", remote: true,                  
-                    data: {
-                        controller: "hello"
-                    } %>
-            </div>        
+            <div data-controller="hello" class="lg:col-span-3 flex items-center justify-end">
+                <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+            </div>
 
         <!-- Mobile and small-screen devices (toggle Menu) -->
         <div id="MobileNavigation" class="hidden sm:hidden mt-4 mx-auto">

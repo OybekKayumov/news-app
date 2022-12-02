@@ -1,8 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  initialize() {console.log('hello')}
+  initialize() { }
+  
   connect() { }
+
   toggleMenu() {
     const bgIcon = document.getElementById('bgIcon')
     const menuList = document.getElementById('menuList')
@@ -11,11 +13,18 @@ export default class extends Controller {
     closeIcon.classList.toggle('!hidden')
     bgIcon.classList.toggle('hidden')
   }
-static targets = [ "name" ]
-  greet() {
-    const element = this.nameTarget
-    const name = element.value
-    console.log(`Hello, ${name}!`)
+
+  profileDropdown() { 
+    const profileDropdown = document.getElementById('dropdown')
+    profileDropdown.classList.toggle('hidden')
+    console.log('clicked')
   }
+
+// static targets = [ "name" ]
+//   greet() {
+//     const element = this.nameTarget
+//     const name = element.value
+//     console.log(`Hello, ${name}!`)
+//   }
 
 }
