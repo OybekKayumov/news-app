@@ -35,9 +35,13 @@
                 <%= Date.today.to_fs(:long) %> 
                 <p><%= link_to "Today's Paper" %></p>
             </div>
+            
             <div class="lg:col-span-6 flex space-x-3 items-center">
-                <h1 class="header font-bold text-2xl leading-6 text-gray-800 dark:text-white text-4xl lg:text-6xl" >The Punfam Times</h1>
+                <h1 class="header font-bold text-4xl leading-6 text-gray-800 dark:text-white lg:text-6xl " >
+                    <%= link_to "The Punfam Times", root_path  %>
+                </h1>
             </div>
+            
             <div class="lg:col-span-3 flex items-center justify-end">                    
                 <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
             </div>        
