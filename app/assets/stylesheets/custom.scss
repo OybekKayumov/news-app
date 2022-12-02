@@ -22,10 +22,61 @@ body {
 
 .header {
   letter-spacing: -2px;
+  font-size: 28px;
+}
+
+#bgIcon {
+  padding-left: 10px;
+}
+
+#menuList {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background-color: rgb(228, 220, 220);
+  z-index: 99;
+}
+
+#closeIcon {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.svgWidth{
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar__list {
+  margin: 40px 12px 12px 12px;
+  // background-color: #fff;
+}
+
+.sidebar__item {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 6px;
 }
 
 @media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
+  }
+
+  .header {
+    font-size: 44px;
+  }
+  #bgIcon {
+    padding-left: 0;
+  }
+
+  #menuList {
+    width: 300px;
   }
 }  

@@ -3,3 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "trix"
 import "@rails/actiontext"
+
+const onClick = (event) => { 
+    console.log('clicked')
+}
