@@ -1,27 +1,11 @@
- <div class="container p-7">
+<div class="container p-7">
     <h1 class="text-4xl">Editor's Dashboard</h1>
 
     <%= @categories.each do |category| %>
-        <h1 class="text-2xl"><%= "#{category.title} News" %></h1>
-         <%= "@#{category.title.downcase}" %>
+        <h1 class="text-2xl"><%= category.title %></h1>
+        <%= category.news.each do |news| %>
+            <h1 class="text-xl"><%= news.title %></h1>
+            <p class="text-lg"><%= news.content %></p>
+        <% end %>         
     <% end %>
-
-   
-    <h1 class="text-2xl">World News</h1>
-    <% @world.each do |news| %>
-            <h1><%= news.title %></h1>
-            <h1><%= news.category_id %></h1>
-    <% end %>
-
-    <h1 class="text-2xl">Uzbekistan News</h1>
-    <% @uzbekistan.each do |news| %>
-            <h1><%= news.title %></h1>
-            <h1><%= news.category_id %></h1>
-    <% end %>
-    <h1 class="text-2xl">Politics News</h1>
-    <% @uzbekistan.each do |news| %>
-            <h1><%= news.title %></h1>
-            <h1><%= news.category_id %></h1>
-    <% end %>
-
 </div>   

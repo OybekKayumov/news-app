@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def editor
-    @categories = Category.all
+    @categories = Category.includes(:news).all
     @world = News.where(category_id: 1)
     @uzbekistan = News.where(category_id: 2)
     @politics = News.where(category_id: 3)
@@ -20,5 +20,6 @@ class PagesController < ApplicationController
     @travel = News.where(category_id: 14)
     @magazine = News.where(category_id: 15)
     @realstate = News.where(category_id: 16)
+    @cooking = News.where(category_id: 17)
   end
 end
