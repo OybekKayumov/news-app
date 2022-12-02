@@ -1,12 +1,12 @@
-<div id="dropdown" class="p-5 hidden bg-slate-100">
+<div id="dropdown" class="p-5 hidden bg-white border-2">
     <% if current_user&.admin? %>
-        <h1 class="sidebar__item">Admin Dashboard</h1>
+        <h1 class="sidebar__item border-t-2 border-b-2">Admin Dashboard</h1>
     <% elsif current_user&.editor? %>
-        <h1 class="sidebar__item">Editor Dashboard</h1>
+        <h1 class="sidebar__item border-b-2"><%= link_to "Editor - Create News For The Day", pages_editor_path %></h1>
     <% elsif current_user&.author? %>
-        <h1 class="sidebar__item">Author Dashboard</h1>
+        <h1 class="sidebar__item border-b-2">Author Dashboard</h1>
     <% end %>
-    <h1 class="sidebar__item"><%= link_to "Create News", new_news_path %></h1>  
-    <h1 class="sidebar__item">Settings</h1>  
+    <h1 class="sidebar__item border-b-2"><%= link_to "Create News", new_news_path %></h1>  
+    <h1 class="sidebar__item border-b-2">Settings</h1>  
 
 </div>
