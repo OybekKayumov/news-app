@@ -37,14 +37,18 @@
                 <p><%= link_to "Today's Paper" %></p>
             </div>
             
-            <div class="lg:col-span-6 flex space-x-3 justify-center items-center">
+            <div class="container lg:col-span-6 flex space-x-3 justify-center items-center">
                 <h1 class="header font-bold leading-6 text-gray-800 dark:text-white" >
                     <%= link_to "The Punfam Times", root_path  %>
                 </h1>
             </div>
             
             <div data-controller="hello" class="lg:col-span-3 flex items-center justify-end">
-                <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+                <% if current_user  %>
+                    <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+                <% else  %>
+                    <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+                <% end %>
             </div>
 
         <!-- Mobile and small-screen devices (toggle Menu) -->

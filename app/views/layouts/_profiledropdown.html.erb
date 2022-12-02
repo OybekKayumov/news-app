@@ -1,8 +1,11 @@
 <div id="dropdown" class="p-5 hidden bg-slate-100">
-    <h1 class="sidebar__item">Home Page</h1>  
-    <h1 class="sidebar__item">Home Page</h1>  
-    <h1 class="sidebar__item">Home Page</h1>  
-    <h1 class="sidebar__item">Home Page</h1>  
-    <h1 class="sidebar__item">Home Page</h1>  
+    <% if current_user&.admin? %>
+        <h1 class="sidebar__item">Admin Dashboard</h1>
+    <% elsif current_user&.editor? %>
+        <h1 class="sidebar__item">Editor Dashboard</h1>
+    <% elsif current_user&.author? %>
+        <h1 class="sidebar__item">Author Dashboard</h1>
+    <% end %>
+    <h1 class="sidebar__item">Settings</h1>  
 
 </div>

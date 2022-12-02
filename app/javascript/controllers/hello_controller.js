@@ -17,7 +17,6 @@ export default class extends Controller {
   profileDropdown() { 
     const profileDropdown = document.getElementById('dropdown')
     profileDropdown.classList.toggle('hidden')
-    console.log('clicked')
   }
 
 // static targets = [ "name" ]
