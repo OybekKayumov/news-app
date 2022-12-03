@@ -4,8 +4,9 @@
     <%= @categories.each do |category| %>
         <h1 class="text-2xl"><%= category.title %></h1>
         <%= category.news.each do |news| %>
+            <%= check_box_tag 'accept' %>
             <h1 class="text-xl"><%= news.title %></h1>
-            <p class="text-lg"><%= news.content %></p>
+            
         <% end %>         
     <% end %>
 </div>   
