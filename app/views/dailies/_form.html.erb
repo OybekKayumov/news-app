@@ -1,0 +1,35 @@
+<div class="container p-7">
+    <h1 class="text-4xl">Editor's Dashboard</h1>
+    
+
+  <%= form_with(model: daily, class: "contents") do |form| %>
+    <% if daily.errors.any? %>
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <h2><%= pluralize(daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
+
+        <ul>
+          <% daily.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= @categories.each do |category| %>
+        <h1 class="text-2xl"><%= category.title %></h1>
+        <%= category.news.each do |news| %>
+            <%= check_box_tag news %>
+            <h1 class="text-xl"><%= news.title %></h1>
+
+             <div class="my-5">
+                <%= form.label :news_id %>
+                <%= form.text_field :news_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+              </div>
+        <% end %>         
+    <% end %>   
+
+    <div class="inline">
+      <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    </div>
+  <% end %>
+</div>
