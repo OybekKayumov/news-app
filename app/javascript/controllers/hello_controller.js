@@ -10,7 +10,7 @@ export default class extends Controller {
     const menuList = document.getElementById('menuList')
     const closeIcon = document.getElementById('closeIcon')
     menuList.classList.toggle('hidden')
-    closeIcon.classList.toggle('!hidden')
+    // closeIcon.classList.toggle('!hidden')
     bgIcon.classList.toggle('hidden')
   }
 
