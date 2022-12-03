@@ -21,8 +21,8 @@
         <%= category.news.each do |news| %>
           <div class="border-4 p-5 mb-5">
             <div class="flex items-center jusify-start">
-              <%= check_box_tag news %>
-              <h1 class="text-xl ml-3"><%= news.title %></h1>
+              <%= check_box_tag news.id %>
+              <h1 class="text-xl ml-3"><%= news.title %></h1>              
             </div>
 
              <div class="my-5">

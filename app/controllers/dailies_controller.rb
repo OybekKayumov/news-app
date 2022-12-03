@@ -22,7 +22,9 @@ class DailiesController < ApplicationController
 
   # POST /dailies or /dailies.json
   def create
-    @daily = Daily.new(daily_params)    
+    @daily = Daily.new(daily_params)
+    @categories = Category.includes(:news).all
+    # @news = News.all    
 
     respond_to do |format|
       if @daily.save
