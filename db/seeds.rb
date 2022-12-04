@@ -71,6 +71,6 @@ Category.create!(title: 'Cooking')
 category = Category.all
 category.each do |t|
     2.times do |news|
-        News.create!(title: "#{news} News", content: "News body #{news}", category_id: t.id, author_id: 3)
+        NewsItem.create!(title: "#{news} News", content: "News body #{news}", category_id: t.id, author_id: 3)
     end
 end

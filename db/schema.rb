@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_03_114250) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_04_043000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,30 +60,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_03_114250) do
   end
 
   create_table "dailies", force: :cascade do |t|
+    t.bigint "editor_id", null: false
+    t.bigint "news_item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["editor_id"], name: "index_dailies_on_editor_id"
+    t.index ["news_item_id"], name: "index_dailies_on_news_item_id"
   end
 
-  create_table "news", force: :cascade do |t|
+  create_table "news_items", force: :cascade do |t|
     t.string "title"
-    t.datetime "posted_date"
     t.string "news_status"
     t.string "comment_status"
     t.bigint "author_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_news_on_author_id"
-    t.index ["category_id"], name: "index_news_on_category_id"
-  end
-
-  create_table "news_dailies", force: :cascade do |t|
-    t.bigint "news_id"
-    t.bigint "daily_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["daily_id"], name: "index_news_dailies_on_daily_id"
-    t.index ["news_id"], name: "index_news_dailies_on_news_id"
+    t.index ["author_id"], name: "index_news_items_on_author_id"
+    t.index ["category_id"], name: "index_news_items_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,6 +95,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_03_114250) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "news", "categories"
-  add_foreign_key "news", "users", column: "author_id"
+  add_foreign_key "dailies", "news_items"
+  add_foreign_key "dailies", "users", column: "editor_id"
+  add_foreign_key "news_items", "categories"
+  add_foreign_key "news_items", "users", column: "author_id"
 end

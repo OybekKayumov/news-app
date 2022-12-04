@@ -1,9 +1,0 @@
-<div id="<%= dom_id news %>">
-    <h2><%= news.title %></h2>
-    <p><%= news.content %></p>
-    <p><%= news.category.title %></p>
-    <p><%= news.created_at %></p>
-    <p><%= news.updated_at %></p>
-    <p><%= link_to 'Edit', edit_news_path(news) %></p>
-    <p><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-</div>

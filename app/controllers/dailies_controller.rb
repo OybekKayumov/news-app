@@ -13,7 +13,6 @@ class DailiesController < ApplicationController
   # GET /dailies/new
   def new
     @daily = Daily.new
-    @categories = Category.includes(:news).all 
   end
 
   # GET /dailies/1/edit
@@ -23,8 +22,6 @@ class DailiesController < ApplicationController
   # POST /dailies or /dailies.json
   def create
     @daily = Daily.new(daily_params)
-    @categories = Category.includes(:news).all
-    # @news = News.all    
 
     respond_to do |format|
       if @daily.save
@@ -68,6 +65,6 @@ class DailiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def daily_params
-      params.require(:daily).permit(:news_id)
+      params.require(:daily).permit(:user_id, :news_id)
     end
 end

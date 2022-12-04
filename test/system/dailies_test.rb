@@ -15,6 +15,7 @@ class DailiesTest < ApplicationSystemTestCase
     click_on "New daily"
 
     fill_in "News", with: @daily.news_id
+    fill_in "User", with: @daily.user_id
     click_on "Create Daily"
 
     assert_text "Daily was successfully created"
@@ -26,6 +27,7 @@ class DailiesTest < ApplicationSystemTestCase
     click_on "Edit this daily", match: :first
 
     fill_in "News", with: @daily.news_id
+    fill_in "User", with: @daily.user_id
     click_on "Update Daily"
 
     assert_text "Daily was successfully updated"

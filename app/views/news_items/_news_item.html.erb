@@ -1,0 +1,32 @@
+<div id="<%= dom_id news_item %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= news_item.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= news_item.content %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">News status:</strong>
+    <%= news_item.news_status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comment status:</strong>
+    <%= news_item.comment_status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= news_item.category_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this news item", news_item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this news item', edit_news_item_path(news_item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

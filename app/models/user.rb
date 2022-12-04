@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :news, dependent: :destroy
+  has_many :daily, dependent: :destroy
   
   roles = %w[admin editor author subscriber]
   roles.each do |role_name|

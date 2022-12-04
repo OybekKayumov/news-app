@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :news_items
   resources :dailies
   resources :categories
   root "pages#home"
   
-  resources :news
   get 'pages/home'
   get 'pages/editor'
   devise_for :users,

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  news_status: MyString
+  comment_status: MyString
+  category: one
+
+two:
+  title: MyString
+  news_status: MyString
+  comment_status: MyString
+  category: two
