@@ -8,6 +8,8 @@ class DailiesController < ApplicationController
 
   # GET /dailies/1 or /dailies/1.json
   def show
+    @dailies = Daily.all
+    current_user = User.find_by(id: session[:user_id])
   end
 
   # GET /dailies/new
@@ -65,6 +67,6 @@ class DailiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def daily_params
-      params.require(:daily).permit(:user_id, :news_id)
+      params.require(:daily).permit(:posted_date)
     end
 end

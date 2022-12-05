@@ -1,12 +1,22 @@
+<% if current_user&.editor?  %>
 <div id="<%= dom_id daily %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= daily.user_id %>
+    <strong class="block font-medium mb-1">Editor:</strong>
+    <% @dailies.each do |daily| %>
+      <%= daily.posted_date %>      
+      <%= daily.news_items.each do |news| %>
+        <div class="border-4 mb-4 p-2">
+        <div class="text-2xl"><%= news.title %></div>
+          <%= news.content %>
+        </div>
+      <% end %>
+    <% end %>
+   
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">News:</strong>
-    <%= daily.news_id %>
+   
   </p>
 
   <% if action_name != "show" %>
@@ -15,3 +25,6 @@
     <hr class="mt-6">
   <% end %>
 </div>
+
+
+<% end %>

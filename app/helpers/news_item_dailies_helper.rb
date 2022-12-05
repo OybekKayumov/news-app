@@ -1,0 +1,2 @@
+module NewsItemDailiesHelper
+end

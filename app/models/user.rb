@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :news, dependent: :destroy
-  has_many :daily, dependent: :destroy
+  has_many :news_items, dependent: :destroy
   
   roles = %w[admin editor author subscriber]
   roles.each do |role_name|

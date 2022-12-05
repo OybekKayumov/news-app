@@ -1,0 +1,2 @@
+class NewsItemDailiesController < ApplicationController
+end
