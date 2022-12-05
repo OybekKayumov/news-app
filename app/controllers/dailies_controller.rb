@@ -15,6 +15,7 @@ class DailiesController < ApplicationController
   # GET /dailies/new
   def new
     @daily = Daily.new
+    @categories = Category.includes(:news_items).all
   end
 
   # GET /dailies/1/edit
@@ -24,6 +25,7 @@ class DailiesController < ApplicationController
   # POST /dailies or /dailies.json
   def create
     @daily = Daily.new(daily_params)
+    @categories = Category.includes(:news_items).all
 
     respond_to do |format|
       if @daily.save
