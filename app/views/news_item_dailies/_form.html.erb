@@ -1,27 +1,20 @@
-<%= form_with(model: daily, class: "contents") do |form| %>
-  <% if daily.errors.any? %>
+<%= form_with(model: news_item_daily, class: "contents") do |form| %>
+  <% if news_item_daily.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
+      <h2><%= pluralize(news_item_daily.errors.count, "error") %> prohibited this news_item_daily from being saved:</h2>
 
       <ul>
-        <% daily.errors.each do |error| %>
+        <% news_item_daily.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="my-5">
+   <div class="my-5">
     <%= form.date_select :posted_date %>
   </div>
-
-  <%# <% @categories.each do |category| %>
-      <%# <h1><%= category.title %></h1>
-      <%# <% collection_check_boxes(:daily, :news_item_ids, category.news_items, :id, :add_selected_news_item_to_daily) %>
-    
-      <%# <br /> %>
-  <%# <% end %>
-
+  
   <% @categories.each do |category| %>
     <h1><%= category.title %></h1>
     <% category.news_items.each do |news| %>

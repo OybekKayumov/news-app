@@ -1,0 +1,8 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="font-bold text-4xl">Editing news item daily</h1>
+
+  <%= render "form", news_item_daily: @news_item_daily %>
+
+  <%= link_to "Show this news item daily", @news_item_daily, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to "Back to news item dailies", news_item_dailies_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+</div>

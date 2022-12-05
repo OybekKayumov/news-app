@@ -27,6 +27,9 @@ class DailiesController < ApplicationController
     @daily = Daily.new(daily_params)
     @categories = Category.includes(:news_items).all
 
+    # @daily.news_items << NewsItem.where(id: params[:news_item_ids])
+    puts "params[:news_item_ids] = #{params[:news_item_ids]}"
+    
     respond_to do |format|
       if @daily.save
         format.html { redirect_to daily_url(@daily), notice: "Daily was successfully created." }
@@ -69,6 +72,6 @@ class DailiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def daily_params
-      params.require(:daily).permit(:posted_date)
+      params.require(:daily).permit(:post_date, :title, :content, :author_id, news_item_ids: [])
     end
 end
