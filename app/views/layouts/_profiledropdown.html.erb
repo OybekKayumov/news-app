@@ -2,7 +2,7 @@
     <% if current_user&.admin? %>
         <h1 class="sidebar__item border-t-2 border-b-2">Admin Dashboard</h1>
     <% elsif current_user&.editor? %>
-        <h1 class="sidebar__item border-b-2"><%= link_to "Editor - Create News For The Day", new_daily_path %></h1>
+        <h1 class="sidebar__item border-b-2"><%= link_to "Editor - Create News For The Day", new_editor_path %></h1>
     <% elsif current_user&.author? %>
         <h1 class="sidebar__item border-b-2">Author Dashboard</h1>
     <% end %>

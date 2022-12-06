@@ -72,6 +72,6 @@ class DailiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def daily_params
-      params.require(:daily).permit(:post_date, :title, :content, :author_id, news_item_ids: [])
+      params.require(:daily).permit(:posted_date, :title, :content, :author_id, news_item_ids: [])
     end
 end

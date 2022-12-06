@@ -1,0 +1,30 @@
+<%= form_with(model: editor, class: "contents") do |form| %>
+  <% if editor.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(editor.errors.count, "error") %> prohibited this editor from being saved:</h2>
+
+      <ul>
+        <% editor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="my-5">
+    <%= form.date_select :posted_date %>
+  </div>
+  
+  <% @categories.each do |category| %>
+    <h1><%= category.title %></h1>
+    <% category.news_items.each do |news| %>
+      <%= check_box_tag "news_item_ids[]", news.id %>
+      <%= news.title %>
+      <br />
+    <% end %>
+  <% end %>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
