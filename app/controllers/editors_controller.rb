@@ -38,6 +38,7 @@ class EditorsController < ApplicationController
         @postDate += "/"
       end
     end
+    # @postDate = "2020/12/12"
     @newsItemToAdd = []
     params[:news_item_ids].each do |news_item_id|
       @newsItemToAdd << news_item_id
@@ -45,7 +46,7 @@ class EditorsController < ApplicationController
 
     puts "newsItemToAdd = #{@newsItemToAdd}"
 
-    Daily.create!(posted_date: @posted_date.to_s)
+    Daily.create!(posted_date: @postDate.to_s)
     @dailyIdToAdd = Daily.last.id
     @newsItemToAdd.each do |news_item_id|
       NewsItemDaily.create!(daily_id: @dailyIdToAdd, news_item_id: news_item_id)
