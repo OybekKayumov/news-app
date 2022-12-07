@@ -71,6 +71,24 @@ body {
   height: calc(100% - 70px);
 }
 
+.title input[type="text"], .category select {
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+ .content {
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+input[type='file'] {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
