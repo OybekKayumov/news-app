@@ -16,11 +16,12 @@
   </div>
   
   <% @categories.each do |category| %>
-    <h1><%= category.title %></h1>
+    <h1 class="text-2xl font-bold border-b-2 mt-5"><%= category.title %></h1>
     <% category.news_items.each do |news| %>
-      <%= check_box_tag "news_item_ids[]", news.id %>
-      <%= news.title %>
-      <br />
+      <div class="editor border-b-2 py-2 text-lg">        
+          <%= check_box_tag "news_item_ids[]", news.id %>
+          <%= news.title %>        
+      </div>
     <% end %>
   <% end %>
 

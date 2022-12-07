@@ -89,6 +89,16 @@ input[type='file'] {
   border: 1px solid lightgray;
 }
 
+.editor {
+  display: flex;
+}
+
+.editor input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  margin: 0 10px 0 0;
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
