@@ -22,7 +22,12 @@
   </div>
   <div>
     <%= form.label :content %>
-     <%= form.rich_text_area :content %>
+     <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.label :image_upload %>
+     <%= form.file_field :image %>
   </div>
 
   <div class="inline">

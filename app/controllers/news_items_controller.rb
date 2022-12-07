@@ -8,6 +8,9 @@ class NewsItemsController < ApplicationController
 
   # GET /news_items/1 or /news_items/1.json
   def show
+    @news_items = NewsItem.all
+    @news_item = NewsItem.find(params[:id])
+    @author = User.find_by(id: @news_item.author_id)
   end
 
   # GET /news_items/new
@@ -70,6 +73,6 @@ class NewsItemsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def news_item_params
       # params.require(:news_item).permit(:title, :news_status, :comment_status, :category_id)
-      params.require(:news_item).permit(:title, :content, :news_status, :comment_status, :author_id, :category_id)
+      params.require(:news_item).permit(:title, :content, :image, :news_status, :comment_status, :author_id, :category_id)
     end
 end

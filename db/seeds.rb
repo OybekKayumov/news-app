@@ -69,8 +69,8 @@ Category.create!(title: 'Real Estate')
 Category.create!(title: 'Cooking')
 
 category = Category.all
-category.each do |t|
-    2.times do |news|
-        NewsItem.create!(title: "#{news} News", content: "News body #{news}", category_id: t.id, author_id: 3)
-    end
-end
+# category.each do |t|
+#     2.times do |news|
+#         NewsItem.create!(title: "#{news} News", content: "News body #{news}", category_id: t.id, author_id: 3)
+#     end
+# end

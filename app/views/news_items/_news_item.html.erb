@@ -1,11 +1,18 @@
 <div id="<%= dom_id news_item %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= news_item.title %>
-  </p>
+  <% if news_item.image.attached?  %>
+    <p>
+      <%= image_tag news_item.image, style: "width: 500px" %>
+    </p>
+  <% end %>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Title:</strong>
+    <%= news_item.title %>
+    <p> By <%= @author.email %></p>
+  </p>
+
+  <p class="my-5">
+    <%# <strong class="block font-medium mb-1">Content:</strong> %>
     <%= news_item.content %>
   </p>
 
