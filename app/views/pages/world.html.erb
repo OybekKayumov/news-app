@@ -1,0 +1,7 @@
+<h1 class="text-4xl">World News</h1>
+
+<% @world.each do |news|  %>
+  <h1><%= news.title %></h1>
+      <%= image_tag news.image, style: "width: 500px" %>
+  <p><%= news.content.truncate(250) %></p>
+<% end %>

@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def editor
-    @categories = Category.includes(:news_item).all
+  def world
+    @world = NewsItem.all.where(category_id: 1)
   end
 end
