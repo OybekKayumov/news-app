@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :news_items, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_one_attached :avatar  
+  has_one_attached :image  
   
   roles = %w[admin editor author subscriber]
   roles.each do |role_name|

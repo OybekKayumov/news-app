@@ -45,9 +45,11 @@
             
             <div data-controller="hello" class="lg:col-span-3 flex items-center justify-end">
                 <% if current_user  %>
-                    <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+                    <%# <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar"> %>
+                    <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src={current_user.image} alt="Default avatar">
                 <% else  %>
-                    <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar">
+                    <%# <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/49184579?v=4" alt="Default avatar"> %>
+                    <img class="w-10 h-10 rounded-full" src={current_user.image} alt="Default avatar">
                 <% end %>
             </div>
 
