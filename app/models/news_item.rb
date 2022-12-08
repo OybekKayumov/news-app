@@ -16,4 +16,5 @@ class NewsItem < ApplicationRecord
     # Daily.find(daily_id).news_items << self
     # NewsItemDaily.create(news_item_id: 1, daily_id: daily_id)
   end
+
 end

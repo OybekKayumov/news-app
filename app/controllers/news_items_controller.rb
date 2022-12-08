@@ -1,5 +1,6 @@
 class NewsItemsController < ApplicationController
   before_action :set_news_item, only: %i[ show edit update destroy ]
+  before_action :full_name, only: [:show]
 
   # GET /news_items or /news_items.json
   def index
@@ -68,6 +69,12 @@ class NewsItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_news_item
       @news_item = NewsItem.find(params[:id])
+    end
+
+    
+    def full_name
+      author = @news_item.author
+      @name = "#{author.first_name} #{author.last_name}"      
     end
 
     # Only allow a list of trusted parameters through.

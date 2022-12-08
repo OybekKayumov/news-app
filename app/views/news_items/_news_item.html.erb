@@ -1,38 +1,46 @@
 <div id="<%= dom_id news_item %>">
   <% if news_item.image.attached?  %>
     <p>
-      <%= image_tag news_item.image, style: "width: 800px" %>
+      <%= image_tag news_item.image, style: "width: 1200px" %>
     </p>
   <% end %>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
+  <p class="my-5 news__title">
+    <%# <strong class="news__title block font-medium mb-1">Title:</strong> %>
     <%= news_item.title %>
-    
+    <p>By <%= @name %></p>
   </p>
 
-  <p class="my-5">
-    <%= news_item.content %>
+  <p class="my-5 text-lg font-normal">
+    <%= simple_format news_item.content %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">News status:</strong>
-    <%= news_item.news_status %>
-  </p>
+  <% if current_user&.editor? || current_user&.author? %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">News status:</strong>
+      <%= news_item.news_status %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Comment status:</strong>
-    <%= news_item.comment_status %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Comment status:</strong>
+      <%= news_item.comment_status %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Category:</strong>
-    <%= news_item.category_id %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Category:</strong>
+      <%= news_item.category_id %>
+    </p>
 
-  <% if action_name != "show" %>
-    <%= link_to "Show this news item", news_item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this news item', edit_news_item_path(news_item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+     <%= link_to 'Edit this news_item', edit_news_item_path(@news_item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to 'Destroy this news_item', news_item_path(@news_item), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <%= link_to 'Back to news_items', news_items_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+    <% if action_name != "show" %>
+      <%= link_to "Show this news item", news_item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to 'Edit this news item', edit_news_item_path(news_item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <hr class="mt-6">      
+    <% end %>
   <% end %>
 </div>

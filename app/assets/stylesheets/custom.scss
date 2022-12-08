@@ -107,7 +107,7 @@ input[type='file'] {
   font-size: 1.125rem;
 }
 
-.field input {
+.field input[type="text"], .field input[type="email"], .field input[type="password"] {
   width: 100%;
   font-size: 1.125rem;
   border-radius: 6px;
