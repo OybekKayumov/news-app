@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'pages/world'
   get 'pages/uzbekistan'
   get 'pages/politics'
-  get 'pages/taskent'
+  get 'pages/tashkent'
   get 'pages/business'
   get 'pages/opinion'
   get 'pages/science'

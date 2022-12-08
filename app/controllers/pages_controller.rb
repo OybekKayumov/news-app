@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def world
-    @world = NewsItem.all.where(category_id: 1)    
+    @world = NewsItem.all.where(category_id: 1).order("created_at desc")   
   end
 
   def uzbekistan
@@ -14,8 +14,8 @@ class PagesController < ApplicationController
     @politics = NewsItem.all.where(category_id: 3)
   end
 
-  def taskhent
-    @taskhent = NewsItem.all.where(category_id: 4)
+  def tashkent
+    @tashkent = NewsItem.all.where(category_id: 4)
   end
 
   def business
