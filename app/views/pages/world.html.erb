@@ -1,34 +1,4 @@
 <div class="container p-7">
   <h1 class="world__title border-b-8 pb-2 mb-7">World News</h1>
-
-  <div class="world__news">
-    <div class="world__news1">
-      <% @world[0..1].each do |news|  %>
-        <div class="world__news1__item py-5 border-b-2">
-          <%= image_tag news.image, style: "width: 500px" %>
-          <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
-          <p><%= news.content.truncate(250) %></p>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="world__news2">
-      <% @world[2..3].each do |news|  %>
-        <div class="world__news2__item py-5 border-b-2">
-          <%= image_tag news.image, style: "width: 500px" %>
-          <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
-          <p><%= news.content.truncate(150) %></p>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="world__news3">
-    <% @world[4..15].each do |news|  %>
-      <div class="world__news3__item py-5 border-b-2">
-        <%= image_tag news.image, style: "width: 500px" %>
-        <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>       
-      </div>
-    <% end %>
-  </div>
+  <%= render 'pages/news', news_category: @world %>
 </div>

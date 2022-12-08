@@ -8,6 +8,22 @@ Rails.application.routes.draw do
   
   get 'pages/home'
   get 'pages/world'
+  get 'pages/uzbekistan'
+  get 'pages/politics'
+  get 'pages/taskent'
+  get 'pages/business'
+  get 'pages/opinion'
+  get 'pages/science'
+  get 'pages/health'
+  get 'pages/sports'
+  get 'pages/arts'
+  get 'pages/books'
+  get 'pages/style'
+  get 'pages/food'
+  get 'pages/travel'
+  get 'pages/magazine'
+  get 'pages/realestate'
+  
   devise_for :users,
   path: '',
   path_names: { sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration' }, 
