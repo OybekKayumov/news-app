@@ -1,7 +1,13 @@
-<h1 class="text-4xl">World News</h1>
+<div class="container">
+  <h1 class="world__title m-7 border-b-2 pb-2">World News</h1>
 
-<% @world.each do |news|  %>
-  <h1><%= news.title %></h1>
-      <%= image_tag news.image, style: "width: 500px" %>
-  <p><%= news.content.truncate(250) %></p>
-<% end %>
+  <div class="m-5">
+    <% @world.each do |news|  %>
+      <div class="mb-5 pb-5 border-b-2">
+        <%= image_tag news.image, style: "width: 500px" %>
+        <h1 class="news__title mt-7"><%= news.title %></h1>
+        <p><%= news.content.truncate(250) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

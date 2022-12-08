@@ -71,6 +71,10 @@ body {
   height: calc(100% - 70px);
 }
 
+.menuAvatar {
+  padding: 8px 9px;
+}
+
 .title input[type="text"], .category select {
   border-radius: 6px;
   border: 1px solid lightgray;
@@ -112,6 +116,20 @@ input[type='file'] {
 
 .edit_user{
   width: 100%;
+}
+
+.world__title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -4px;
+}
+
+.news__title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 @media screen and (min-width: 1024px) {

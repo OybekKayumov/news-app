@@ -2,7 +2,6 @@
     <div class="py-0 lg:container mx-auto  sm:px-7 flex align-center justify-between">
         <div class="flex" data-controller="hello">
             <!-- Burger Icon -->                    
-            <%# <div id="bgIcon" onclick="toggleMenu()" %>
             <div id="bgIcon" data-action="click->hello#toggleMenu"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 flex justify-center items-center cursor-pointer hamburger-fixed">
                 <img class="dark:bg-white" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg6.svg" alt="burger" />
@@ -48,10 +47,10 @@
                     <% if current_user.first_name?  %>
                         <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="<%= url_for(current_user.image) %>" alt="Default avatar">
                     <% else %>
-                        <div data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold p-2"><h1>EA</h1></div>
+                        <div data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
                     <% end %>
                 <% else  %>
-                    <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold p-2"><h1>EA</h1></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
                 <% end %>
             </div>
 
