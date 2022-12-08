@@ -132,6 +132,60 @@ input[type='file'] {
     letter-spacing: -1px;
 }
 
+@media screen and (min-width: 768px) {
+  .world__news1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .world__news1__item:nth-child(odd) {
+    padding: 0 20px 20px 0;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .world__news1__item:nth-child(even) {
+    padding: 0 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .world__news2__item:nth-child(odd) {
+     padding: 20px 20px 20px 0;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news2__item:nth-child(even) {
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .world__news3__item:nth-child(odd) {
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news3__item:nth-child(even) {
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news3 .news__title {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-hide {
     display: flex;
@@ -154,5 +208,33 @@ input[type='file'] {
     right: 0;
     width: 30%;
     height: calc(100% - 100px);
+  }
+
+  .world__news {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+  
+  .world__news2 {
+    display: flex;
+    flex-direction: column;
+  }  
+
+  .world__news1__item:nth-child(even) {
+    padding: 0 20px 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news2__item:nth-child(odd) {
+    padding: 0 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news2__item:nth-child(even) {
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
   }
 }  
