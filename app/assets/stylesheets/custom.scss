@@ -53,14 +53,17 @@ body {
 }
 
 .sidebar__list {
+  display: flex;
+  flex-direction: column;
   margin: 40px 12px 12px 12px;
   // background-color: #fff;
 }
 
 .sidebar__item {
-  font-size: 20px;
-  font-weight: 500;
-  padding: 12px;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 4px;
+  border: 1px solid lightgray;
 }
 
 #dropdown {
