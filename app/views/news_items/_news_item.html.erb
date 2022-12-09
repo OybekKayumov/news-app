@@ -8,7 +8,10 @@
   <p class="my-5 news__title">
     <%# <strong class="news__title block font-medium mb-1">Title:</strong> %>
     <%= news_item.title %>
-    <p>By <%= @name %></p>
+    <div class="flex items-center">
+      <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full mr-2" src="<%= url_for(@author.image) %>" alt="Default avatar">
+      <p >By <%= @name %></p>
+    </div>
   </p>
 
   <p class="my-5 text-lg font-normal">

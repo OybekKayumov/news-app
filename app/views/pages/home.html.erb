@@ -1,3 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
+<div class="container mx-auto px-7">
+    <div class="home">
+        <div class="home__left__side"></div>
+        <div class="home__right__side">
+            <% @opinions.each do |opinion|  %>
+                <h1><%= opinion.title %></h1>
+            <% end %>
+        </div>
+    </div>
+</div>

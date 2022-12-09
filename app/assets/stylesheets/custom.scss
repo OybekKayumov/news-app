@@ -171,14 +171,16 @@ input[type='file'] {
   }
 
   .world__news3__item:nth-child(odd) {
-    padding: 20px 20px 20px 0;
-    border-bottom: 1px solid lightgray;
+    margin: 10px 10px 10px 0;
+    padding: 20px 20px;
+    border: 1px solid lightgray;
   }
 
   .world__news3__item:nth-child(even) {
-    padding: 20px 0 20px 20px;
+    margin: 10px 0 10px 10px;
+    padding: 20px 20px;
     border-left: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border: 1px solid lightgray;
   }
 
   .world__news3 .news__title {
@@ -234,6 +236,18 @@ input[type='file'] {
 
   .world__news2__item:nth-child(even) {
     padding: 20px 0 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news3__item:nth-child(2) {
+    padding: 20px 20px 20px 20px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .world__news3__item:nth-child(3) {
+    padding: 20px 20px 20px 20px;
     border-left: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
   }

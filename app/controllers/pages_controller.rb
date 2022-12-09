@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def home
+    @opinions = NewsItem.all.where(category_id: 6).order("created_at desc")
+    
   end
 
   def world

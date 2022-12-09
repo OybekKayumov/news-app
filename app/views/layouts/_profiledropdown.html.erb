@@ -4,6 +4,7 @@
     <% elsif current_user&.editor? %>
         <h1 class="sidebar__item border-b-2"><%= link_to "Editor - Create News For The Day", new_editor_path %></h1>
     <% elsif current_user&.author? %>
+        <h1 class="text-4xl sidebar__item border-b-2">Hello, <%= current_user.first_name %>!</h1>
         <h1 class="sidebar__item border-b-2">Author Dashboard</h1>
     <% end %>
     <h1 class="sidebar__item border-b-2"><%= link_to "Create News", new_news_item_path %></h1>  
