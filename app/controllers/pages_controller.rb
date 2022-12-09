@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   def home
-    @opinions = NewsItem.all.where(category_id: 6).order("created_at desc")
-    
+    @date = Date.today
+    @daily = Daily.find_by(posted_date: @date.to_s)
+    @opinion = NewsItem.all.where(category_id: 6).order("created_at desc")
+    @realestate = NewsItem.all.where(category_id: 16).order("created_at desc")
   end
 
   def world

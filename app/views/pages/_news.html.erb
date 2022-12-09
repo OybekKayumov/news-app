@@ -1,7 +1,7 @@
-<div class="world__news">
-    <% if news_category.length <= 5 %>
-        <p>There are less than 5 news</p>
-    <% else  %>
+<% if news_category.length <= 5 %>
+    <p>There are less than 5 news</p>
+<% else  %>
+    <div class="world__news">
         <div class="world__news1">
             <% news_category[0..1].each do |news|  %>
             <div class="world__news1__item py-5 border-b-2">
@@ -13,21 +13,21 @@
             </div>
             <% end %>
         </div>
-       
-            <div class="world__news2">
-                <% news_category[2..3].each do |news|  %>
-                <div class="world__news2__item py-5 border-b-2">
-                    <%= link_to news do  %>
-                        <%= image_tag news.image, style: "width: 500px" %>
-                        <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
-                    <% end  %>
-                    <p><%= news.content.truncate(150) %></p>
-                </div>
-                <% end %>
+    
+        <div class="world__news2">
+            <% news_category[2..3].each do |news|  %>
+            <div class="world__news2__item py-5 border-b-2">
+                <%= link_to news do  %>
+                    <%= image_tag news.image, style: "width: 500px" %>
+                    <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
+                <% end  %>
+                <p><%= news.content.truncate(150) %></p>
             </div>
+            <% end %>
         </div>
-       
-        <div class="world__news3">
+    </div>
+    
+    <div class="world__news3">
         <% news_category[4..15].each do |news|  %>
             <div class="world__news3__item py-5 border-b-2">
                 <%= link_to news do  %>
@@ -36,7 +36,5 @@
                 <% end  %>
             </div>
         <% end %>        
-       
-        
-    <% end %>
-</div>
+    </div>
+<% end %>
