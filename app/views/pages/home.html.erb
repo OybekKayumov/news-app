@@ -70,9 +70,9 @@
 
             <%# Right Side %>        
             <div class="home__right__side">
-                <h2 class="font-bold text-md ml-5 italic">Opinion</h2>
+                <h2 class="font-bold text-md md:ml-5 italic">Opinion</h2>
                 <% @opinion[0..10].each do |news|  %>
-                <div class="pl-5 py-4 border-b-2">
+                <div class="md:pl-5 py-4 border-b-2">
                     <%= link_to news do  %>
                         <%# <%= image_tag @author.image, style: "width: 500px" %>
                         <h1 class="news__title"><%= @author %></h1>
@@ -81,9 +81,9 @@
                 </div>
                 <% end %>
 
-                <h2 class="font-bold text-md my-7 ml-5 italic">Real Estate</h2>
+                <h2 class="font-bold text-md my-7 md:ml-5 italic">Real Estate</h2>
                 <% @realestate[0..1].each do |news|  %>
-                <div class="pl-5 py-5 border-b-2">
+                <div class="md:pl-5 py-5 border-b-2">
                     <%= link_to news do  %>
                         <%= image_tag news.image, style: "width: 500px" %>
                         <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
