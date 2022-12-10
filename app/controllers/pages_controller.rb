@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :get_author
+
   def home
     @date = Date.today
     @daily = Daily.find_by(posted_date: @date.to_s)
@@ -27,7 +29,7 @@ class PagesController < ApplicationController
   end
 
   def opinion
-    @opinion = NewsItem.all.where(category_id: 6)
+    @opinion = NewsItem.all.where(category_id: 6)  
   end
 
   def science
@@ -69,4 +71,13 @@ class PagesController < ApplicationController
   def realestate
     @realestate = NewsItem.all.where(category_id: 16)
   end
+
+  private
+
+  def get_author
+    # @news_items = NewsItem.all
+    # @news_item = NewsItem.find(params[:id])
+    # @author = User.find_by(id: @news_item.author_id)
+  end
+  
 end

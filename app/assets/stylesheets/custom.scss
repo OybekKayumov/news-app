@@ -62,8 +62,10 @@ body {
 .sidebar__item {
   font-size: 18px;
   font-weight: 300;
-  padding: 4px;
+  padding: 4px 16px;
+  margin: 4px 0;
   border: 1px solid lightgray;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 #dropdown {
@@ -135,10 +137,6 @@ input[type='file'] {
     letter-spacing: -1px;
 }
 
-// .home__left__side__item:nth-child(even) .home__left__image {
-//   display: none;
-// }
-
 .home__left__image {
   width: 1200px;
   margin-top: 20px;
@@ -157,7 +155,6 @@ input[type='file'] {
 
   .home__left__side__item a {
     display: grid;
-    // grid-template-columns: 2fr 3fr;
     padding-right: 20px;
     align-items: flex-start;
   }
@@ -268,7 +265,7 @@ input[type='file'] {
     position: fixed;
     top: 100px;
     right: 0;
-    width: 30%;
+    width: 300px;
     height: calc(100% - 100px);
   }
 
