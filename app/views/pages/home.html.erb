@@ -1,18 +1,70 @@
 <div class="container mx-auto px-7 mt-7">
-    <% if @daily.news_items.length <= 5 %>
-        <p>There are less than 5 news</p>
+    <% if @daily.posted_date != Date.today.to_s %>
+        <p>There are no news for today!</p>
     <% else  %>
         <div class="home">
             <div class="home__left__side">
-                <% @daily.news_items.each do |news|  %>
-                <div class="world__news1__item py-5 border-b-2">
-                    <%= link_to news do  %>
-                        <%= image_tag news.image, style: "width: 1200px" %>
-                        <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
-                    <% end  %>
-                    <p><%= news.content.truncate(250) %></p>
-                </div>
+                
+                <% @daily.news_items[0..3].each do |news|  %>
+                    <div class="home__left__side__section1">
+                        <div class="home__left__side__item mt-4  md:mr-4 pb-5 border-b-2">
+                            <%= link_to news do  %>
+                                <div class="flex flex-col justify-start">
+                                    <h1 class="news__title mb-3"><%= news.title %></h1>
+                                    <p class="news__content"><%= news.content.truncate(130) %></p>
+                                </div>
+                            <% end  %>
+                        </div>
+                        <div class="hide__image md:mr-5">
+                            <%= link_to news do  %>
+                                <%= image_tag news.image, class: "home__left__image" %>
+                            <% end  %>
+                        </div>
+                    </div>                 
                 <% end %>
+
+                <div class="home__left__side__section2 pb-5 border-b-2">
+                    <% @daily.news_items[4..5].each do |news|  %>
+                        <div class="home__left__side__item2 mt-4  md:mr-4">
+                            <%= link_to news do  %>
+                                <div class="flex flex-col justify-start">
+                                    <h1 class="news__title mb-3"><%= news.title %></h1>
+                                </div>
+                            <% end  %>
+                        </div>                       
+                    <% end %>
+                </div>
+
+                <% @daily.news_items[6..8].each do |news|  %>
+                    <div class="home__left__side__section1">
+                        <div class="home__left__side__item mt-4  md:mr-4 pb-5 border-b-2">
+                            <%= link_to news do  %>
+                                <div class="flex flex-col justify-start">
+                                    <h1 class="news__title mb-3"><%= news.title %></h1>
+                                    <p class="news__content"><%= news.content.truncate(130) %></p>
+                                </div>
+                            <% end  %>
+                        </div>
+                        <div class="hide__image md:mr-5">
+                            <%= link_to news do  %>
+                                <%= image_tag news.image, class: "home__left__image" %>
+                            <% end  %>
+                        </div>
+                    </div>                 
+                <% end %>  
+
+                <div class="home__left__side__section2 pb-5 border-b-2">
+                    <% @daily.news_items[9..12].each do |news|  %>
+                        <div class="home__left__side__item2 mt-4  md:mr-4">
+                            <%= link_to news do  %>
+                                <div class="flex flex-col justify-start">
+                                    <h1 class="news__title mb-3"><%= news.title %></h1>
+                                </div>
+                            <% end  %>
+                        </div>                       
+                    <% end %>
+                </div>
+                            
             </div>
         
             <div class="home__right__side">

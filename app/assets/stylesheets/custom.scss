@@ -135,11 +135,58 @@ input[type='file'] {
     letter-spacing: -1px;
 }
 
+// .home__left__side__item:nth-child(even) .home__left__image {
+//   display: none;
+// }
+
+.home__left__image {
+  width: 1200px;
+  margin-top: 20px;
+}
+
+.home__left__side__section1:nth-child(even) .hide__image {
+  display: none;
+}
+
 
 @media screen and (min-width: 768px) {
   .home {
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 5fr 2fr;    
+  }
+
+  .home__left__side__item a {
+    display: grid;
+    // grid-template-columns: 2fr 3fr;
+    padding-right: 20px;
+    align-items: flex-start;
+  }
+
+  .home__left__side__section1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .home__left__side__item {
+    flex: 0.4;
+  }
+
+  .home__left__side__section1:nth-child(even) .home__left__side__item {
+    flex: 1;
+  }
+
+  .hide__image {
+    flex: 0.6;
+  }
+
+  .home__left__side__section2 {
+    display: flex;
+
+  }
+
+  .home__left__side__item2:nth-child(even){
+    border-left: 1px solid lightgray;
+    padding-left: 20px;
   }
 
   .home__right__side {
