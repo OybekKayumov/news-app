@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.1.3"
 
 gem "rails", "~> 7.0.4"
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -17,7 +17,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
-# gem "sassc-rails"
+gem "sassc-rails"
 gem "image_processing", "~> 1.2"
 
 group :development, :test do
