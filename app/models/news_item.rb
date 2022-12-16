@@ -11,6 +11,7 @@ class NewsItem < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
   validates :author_id, presence: true
+  validates :image, presence: true
 
   def add_selected_news_item_to_daily
     # Daily.find(daily_id).news_items << self
