@@ -1,5 +1,5 @@
-<% if news_category.length <= 5 %>
-    <p>There are less than 5 news</p>
+<% if news_category.length < 1 %>
+    <p>There are less than no news</p>
 <% else  %>
     <div class="world__news">
         <div class="world__news1">
@@ -21,7 +21,6 @@
                     <%= image_tag news.image, style: "width: 500px" %>
                     <h1 class="news__title mt-7 mb-3"><%= news.title %></h1>
                 <% end  %>
-                <p><%= news.content.truncate(150) %></p>
             </div>
             <% end %>
         </div>
