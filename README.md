@@ -7,7 +7,7 @@ This Rails app allows 4 different types of users viz admin, editor, author and s
 - Subscriber can view all the news and can subscribe to the daily collection of news.
 
 ## Live server
-[Demo](https://punfamm.fly.dev)
+[Demo](https://punfamm.fly.dev/pages/world)
 
 
 ## Built With
