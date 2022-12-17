@@ -101,7 +101,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_084338) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "role", default: "subscriber"
+    t.string "role", default: "editor"
     t.string "last_name"
     t.string "first_name"
     t.index ["email"], name: "index_users_on_email", unique: true

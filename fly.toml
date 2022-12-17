@@ -1,6 +1,6 @@
-# fly.toml file generated for poonfam on 2022-12-16T16:56:24+05:30
+# fly.toml file generated for punfamm on 2022-12-16T17:57:40+05:30
 
-app = "poonfam"
+app = "punfamm"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -51,5 +51,5 @@ processes = []
   url_prefix = "/"
 
 [mounts]
-  source="poonfam"
+  source="punfamm"
   destination="/data"
